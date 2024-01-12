@@ -11,11 +11,7 @@ function Hamburger({onHeadphoneMenu, onAirpodsMenu, onMonitorsMenu, onAccessorie
         setElectroncisMenu(!electronicsMenu);
     }
 
-    const [homeAndContactUs, setHomeAndContactUs ] = useState(false);
-
-  const extraOptionsHandler = () =>{
-
-  }
+    
 
   const [showContactUs, setShowContactUs] = useState(false);
 
@@ -61,7 +57,7 @@ const scrollAndShowForm = () =>{
               (window.innerWidth <950 ) && (
                 <>
                 <li onClick={onAllMenu} className='cursor-pointer transition duration-300 hover:bg-slate-400 p-2 rounded'>Home</li>
-                <li onClick={scrollAndShowForm} className='cursor-pointer transition duration-300 hover:bg-slate-400 p-2 rounded'>Contact us</li></>
+                </>
               )
             }
         </ul>
