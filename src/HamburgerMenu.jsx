@@ -58,7 +58,7 @@ const scrollAndShowForm = () =>{
             <li onClick={onHomeMenu} className='cursor-pointer transition duration-300 hover:bg-slate-400 p-2 rounded'>Home Appliences</li>
             <li onClick={onAllMenu} className='cursor-pointer transition duration-300 hover:bg-slate-400 p-2 rounded'>All products</li>
             {
-              (window.innerWidth <1340 ) && (
+              (window.innerWidth <950 ) && (
                 <>
                 <li onClick={onAllMenu} className='cursor-pointer transition duration-300 hover:bg-slate-400 p-2 rounded'>Home</li>
                 <li onClick={scrollAndShowForm} className='cursor-pointer transition duration-300 hover:bg-slate-400 p-2 rounded'>Contact us</li></>
