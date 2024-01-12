@@ -1,0 +1,14 @@
+.cardDiv{
+display: grid;
+gap: 2rem;
+grid-template-columns: repeat(5, minmax(0, 1fr));
+grid-template-rows: repeat(7, minmax(0, 1fr));
+height: 100%;
+width: 100%;
+}
+
+@media(max-width: 1340px){
+    .cardDiv{
+        display: block;
+    }
+}

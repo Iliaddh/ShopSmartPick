@@ -1,0 +1,15 @@
+.searchBar{
+    padding: 10px;
+    margin-right: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.searchBar:focus{
+    border: 3px solid black;
+}
+
+@media (max-width: 440px){
+    .searchBar{
+        width: 80px;
+    }
+}
