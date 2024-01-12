@@ -11,7 +11,32 @@ function Hamburger({onHeadphoneMenu, onAirpodsMenu, onMonitorsMenu, onAccessorie
         setElectroncisMenu(!electronicsMenu);
     }
 
-  
+    const [homeAndContactUs, setHomeAndContactUs ] = useState(false);
+
+  const extraOptionsHandler = () =>{
+
+  }
+
+  const [showContactUs, setShowContactUs] = useState(false);
+
+  const contactUsHandler = ( ) =>{
+    setShowContactUs(!showContactUs);
+  }
+
+  const scrollToContact = () => {
+    // Find the element by ID
+    const element = document.getElementById('contactp');
+
+    // Scroll to the element
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+};
+
+const scrollAndShowForm = () =>{
+  contactUsHandler();
+  scrollToContact();
+}
 
   return (
     <>
@@ -32,6 +57,13 @@ function Hamburger({onHeadphoneMenu, onAirpodsMenu, onMonitorsMenu, onAccessorie
             </ul>
             <li onClick={onHomeMenu} className='cursor-pointer transition duration-300 hover:bg-slate-400 p-2 rounded'>Home Appliences</li>
             <li onClick={onAllMenu} className='cursor-pointer transition duration-300 hover:bg-slate-400 p-2 rounded'>All products</li>
+            {
+              (window.innerWidth <1340 ) && (
+                <>
+                <li onClick={onAllMenu} className='cursor-pointer transition duration-300 hover:bg-slate-400 p-2 rounded'>Home</li>
+                <li onClick={scrollAndShowForm} className='cursor-pointer transition duration-300 hover:bg-slate-400 p-2 rounded'>Contact us</li></>
+              )
+            }
         </ul>
       </div>
     </>
