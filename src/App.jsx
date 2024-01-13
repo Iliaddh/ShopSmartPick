@@ -262,9 +262,9 @@ const scrollAndShowForm = () =>{
       <nav className='w-full h-full flex justify-center items-center'>
          <img src={hamburger} className='h-8  mt-6 mr-16 cursor-pointer' onClick={hamburgerMenu}/>
         <div className='w-4/5 mt-6 flex items-center justify-between'>
-          <div className='flex items-center'><img src={logo} className='h-10 cursor-pointer'/><p className={`p-2 mr-4 text-xl font-bold ${s.name}`}>ShopSmartPick</p></div>
+          <div className='flex items-center'><img src={logo} className='h-10 cursor-pointer' onClick={allhandler}/><p className={`p-2 mr-4 text-xl font-bold ${s.name}`}>ShopSmartPick</p></div>
           <div>
-           <NewA className='cursor-pointer'><a href='#main'>Home</a></NewA>
+           <NewA className='cursor-pointer'><a href='' onClick={allhandler}>Home</a></NewA>
            <NewA className='cursor-pointer' onClick={scrollAndShowForm}>Contact us</NewA>
           </div>
           <div className='flex items-center ' id='main'>
