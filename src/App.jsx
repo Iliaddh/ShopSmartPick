@@ -11,6 +11,9 @@ import Hamburger from "./HamburgerMenu";
 import s from "./card.module.css";
 import Headphones from "./Headphones.jsx";
 import emailjs from '@emailjs/browser';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 
 const NewA = styled.a `
@@ -120,6 +123,8 @@ function App() {
         alert(error.text)
       });
   };
+
+  
 
   const[allCards , setAllCards] = useState(true);
   const[showHeadphones , setShowHeadphones] = useState(false);
